@@ -21,15 +21,15 @@ public class CalculadoraTest {
 		float resultadoesperado=6;
 		float resultadoEjecucion = miCalculadora.suma(2, 4);
 		//verificar
-		asserThat(resultadoesperado, equalTo(resultadoEjecucion));
+		assertThat(resultadoesperado, equalTo(resultadoEjecucion));
 	}
 	@Test
 	public void sumaConceroTest() {
 		//llamar al codigo
-		float resultadoEsperando=4;
+		float resultadoesperado=4;
 		float resultadoEjecucion = miCalculadora.suma(0,4);
 		//verificar
-		asserThat(resultadoesperado, equalTo(resultadoEjecucion));
+		assertThat(resultadoesperado, equalTo(resultadoEjecucion));
 	}
 	
 	@Test
@@ -38,7 +38,7 @@ public class CalculadoraTest {
 		float resultadoesperando= 8;
 		float resultadoEjecucion= miCalculadora.multiplica(2,4);
 	//verificar
-		asserThat(resultadoesperado, equalTo(resultadoEjecucion));
+		assertThat(resultadoesperado, equalTo(resultadoEjecucion));
 		
 	}
 	@Test
@@ -47,7 +47,7 @@ public class CalculadoraTest {
 		float resultadoesperando= 0;
 		float resultadoEjecucion= miCalculadora.multiplica(0,4);
 	//verificar
-		asserThat(resultadoesperado, equalTo(resultadoEjecucion));	
+		assertThat(resultadoesperado, equalTo(resultadoEjecucion));	
 	}
 	@Test
 	public void divisionnormal() {
@@ -55,16 +55,22 @@ public class CalculadoraTest {
 		float resultadoesperando= 5;
 		float resultadoEjecucion= miCalculadora.divide(25,5);
 	//verificar
-		asserThat(resultadoesperado, equalTo(resultadoEjecucion));	
+		assertThat(resultadoesperado, equalTo(resultadoEjecucion));	
 	}
 	
 	@Test
 	public void divisioncondecimal() {
 	//llamar al codigo	
-		double  resultadoesperando= 0.2;
-		float resultadoEjecucion= miCalculadora.divide(5,25);
+		float  resultadoesperando= 4;
+		float resultadoEjecucion= miCalculadora.divide(16,4);
 	//verificar
-		asserThat(resultadoesperado, equalTo(resultadoEjecucion));	
+		assertThat(resultadoesperado, equalTo(resultadoEjecucion));	
+	}
+	@Test(expected = ArithmeticException.class)
+	public void dividirentrecero() {
+		float resultadoesperando= 0;
+		float resultadoEjecucion= miCalculadora.divide(10,0);
+		assertThat(resultadoesperado, equalTo(resultadoEjecucion));
 	}
 	@After
 	public void teardown() {
