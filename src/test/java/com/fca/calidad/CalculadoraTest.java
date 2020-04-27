@@ -38,7 +38,7 @@ public class CalculadoraTest {
 		float resultadoesperando= 8;
 		float resultadoEjecucion= miCalculadora.multiplica(2,4);
 	//verificar
-		assertThat(resultadoesperado, equalTo(resultadoEjecucion));
+		assertThat(resultadoesperando, equalTo(resultadoEjecucion));
 		
 	}
 	@Test
@@ -47,15 +47,15 @@ public class CalculadoraTest {
 		float resultadoesperando= 0;
 		float resultadoEjecucion= miCalculadora.multiplica(0,4);
 	//verificar
-		assertThat(resultadoesperado, equalTo(resultadoEjecucion));	
+		assertThat(resultadoesperando, equalTo(resultadoEjecucion));	
 	}
 	@Test
 	public void divisionnormal() {
 	//llamar al codigo	
 		float resultadoesperando= 5;
-		float resultadoEjecucion= miCalculadora.divide(25,5);
+		float resultadoEjecucion= miCalculadora.divide(5,25);
 	//verificar
-		assertThat(resultadoesperado, equalTo(resultadoEjecucion));	
+		assertThat(resultadoesperando, equalTo(resultadoEjecucion));	
 	}
 	
 	@Test
@@ -64,13 +64,13 @@ public class CalculadoraTest {
 		float  resultadoesperando= 4;
 		float resultadoEjecucion= miCalculadora.divide(16,4);
 	//verificar
-		assertThat(resultadoesperado, equalTo(resultadoEjecucion));	
+		assertThat(resultadoesperando, equalTo(resultadoEjecucion));	
 	}
 	@Test(expected = ArithmeticException.class)
 	public void dividirentrecero() {
 		float resultadoesperando= 0;
 		float resultadoEjecucion= miCalculadora.divide(10,0);
-		assertThat(resultadoesperado, equalTo(resultadoEjecucion));
+		assertThat(resultadoesperando, equalTo(resultadoEjecucion));
 	}
 	@After
 	public void teardown() {
