@@ -17,7 +17,7 @@ public class UadyVirtualLoginTest{
 
   @Before
   public void setUp() throws Exception {
-	  System.setProperty("webdriver.chrome.driver"," /Users/JUANM/Documents/chromedriver");
+	  System.setProperty("webdriver.chrome.driver"," /Users/JUANM/Documents/chromedriver.exe");
     driver = new ChromeDriver();
     baseUrl = "https://www.google.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -34,7 +34,7 @@ public class UadyVirtualLoginTest{
 		 driver.findElement(By.id("password")).clear();
 		 driver.findElement(By.id("password")).sendKeys("adadadad");
 		 driver.findElement(By.id("loginbtn")).click();
-		//assertTextoPresent();
+	//	assertTextoPresent();
 		
 	    
   }
@@ -47,9 +47,9 @@ public class UadyVirtualLoginTest{
     driver.findElement(By.id("username")).sendKeys("a16111353");
     driver.findElement(By.id("yui_3_17_2_1_1589417984910_38")).click();
     driver.findElement(By.id("yui_3_17_2_1_1589417984910_36")).click();
-    driver.findElement(By.id("password")).sendKeys("Manolito12345");;
+    driver.findElement(By.id("password")).sendKeys("");;
     driver.findElement(By.id("loginbtn")).click();
-   // assertTextoPresent = (By.id("page-my-index"));	
+  // assertTextoPresent = (By.id("page-my-index"));	
   }
 
   @After
