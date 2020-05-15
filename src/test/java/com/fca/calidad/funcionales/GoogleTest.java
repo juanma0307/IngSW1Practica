@@ -17,7 +17,7 @@ public class GoogleTest {
 
   @Before
   public void setUp() throws Exception {
-	System.setProperty("Webdriver.chrome.driver","C://Users/JUANM/Download/chromedriver.exe");
+	System.setProperty("Webdriver.chrome.driver","/Users/JUANM/Documents/chromedriver.exe");
     driver = new ChromeDriver();
     baseUrl = "https://www.google.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -26,6 +26,7 @@ public class GoogleTest {
   @Test
   public void testGoogleBusqueda() throws Exception {
     driver.get("https://www.google.com/");
+    
     driver.findElement(By.name("q")).click();
     driver.findElement(By.name("q")).sendKeys(Keys.DOWN);
     driver.findElement(By.name("q")).clear();
@@ -37,7 +38,7 @@ public class GoogleTest {
 
   @After
   public void tearDown() throws Exception {
-    driver.quit();
+   // driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
       fail(verificationErrorString);
