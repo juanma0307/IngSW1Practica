@@ -37,7 +37,7 @@ public class UadyVirtualLoginTest{
     // Warning: assertTextPresent may require manual changes
     assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Datos erróneos\\. Por favor, inténtelo otra vez\\.[\\s\\S]*$"));
   }
-	  
+	//  
   @Test
   public void testPruebaExitosaUady() throws Exception {
     driver.get("https://es.uadyvirtual.uady.mx/");
@@ -48,7 +48,7 @@ public class UadyVirtualLoginTest{
     driver.findElement(By.id("username")).sendKeys("a16111353");
     driver.findElement(By.id("password")).click();
     driver.findElement(By.id("password")).clear();
-    driver.findElement(By.id("password")).sendKeys("Manolito12345");
+    driver.findElement(By.id("password")).sendKeys("contrasena");
     driver.findElement(By.id("loginbtn")).click();
     // Warning: assertTextPresent may require manual changes
     assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Administración de la Calidad del Software - E[\\s\\S]*$"));
