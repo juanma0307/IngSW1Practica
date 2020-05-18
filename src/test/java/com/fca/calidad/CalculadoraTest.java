@@ -27,7 +27,7 @@ public class CalculadoraTest {
 	public void sumaConceroTest() {
 		//llamar al codigo
 		float resultadoesperado=4;
-		float resultadoEjecucion = miCalculadora.suma(0,4);
+		float resultadoEjecucion = miCalculadora.suma(0,2);
 		//verificar
 		assertThat(resultadoesperado, equalTo(resultadoEjecucion));
 	}
