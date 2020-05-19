@@ -36,7 +36,7 @@ public class CalculadoraTest {
 	public void Multiplicacionormal() {
 	//llamar al codigo	
 		float resultadoesperando= 8;
-		float resultadoEjecucion= miCalculadora.multiplica(2,4);
+		float resultadoEjecucion= miCalculadora.multiplica(2,2);
 	//verificar
 		assertThat(resultadoesperando, equalTo(resultadoEjecucion));
 		
